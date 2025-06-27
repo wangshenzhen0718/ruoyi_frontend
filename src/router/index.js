@@ -177,7 +177,9 @@ Router.prototype.replace = function push(location) {
 }
 
 export default new Router({
-  mode: 'hash', // 去掉url中的#
+  // 用的是 hash 模式（URL 有 #）
+  // 用的是 history 去掉url中的 #
+  mode: 'hash',
   scrollBehavior: () => ({ y: 0 }),
   routes: constantRoutes
 })
